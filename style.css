@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    position: relative;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*           nav Bar               */
+.nav-Bar {
+    z-index: 5;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    border: solid black 1px;
+    background: rgb(230, 230, 230);
+}
+
+/*          video Window             */
+.video-Window {
+    z-index: 3;
+    position: fixed;
+    margin-top: 50px;
+    height: 56vw;
+    width: 98%;
+    border: solid black 1px;
+    background-color: rgb(189, 181, 181);
+}
+
+/*          video Metadata          */
+.video-Metadata {
+    margin-top: calc(50px + 56vw);
+    height: 180px;
+    border: solid black 1px;
+    background: rgb(230, 230, 230);
+}
+
+/*      video Comments              */
+.video-Comments {
+    height: 47px;
+    border: solid black 1px;
+}
+
+/*           lazy List               */
+.lazy-List {
+    height: 5000px;
+    border: solid black 1px;
+    background: rgb(230, 230, 230);
+}
+
+/* comments Entry Point */
+/* .comments-entry-point{
+height: 47px;
+border: solid black 1px;
+} */
+
+
+/* ///////////// Media Queries Breakpoints according YouTube ////////// */
+
+
+/* Medium devices (tablets, 735px and up) */
+@media (min-width: 735px) {
+    .video-Window {
+        height: 42vw;
+    }
+    .video-Metadata {
+        margin-top: calc(50px + 42vw);
+    }
+}
+
+/* Large devices (desktops, 799px and up) */
+@media (min-width: 799px) {
+    .video-Window {
+        height: 40vw;
+    }
+    .video-Metadata {
+        margin-top: calc(50px + 40vw);
+    }
+
+    .video-content{
+        width: 100%;
+    }
+
+ 
+
+
+}
+
+/* Extra large devices (large desktops, 1279px and up) */
+@media (min-width: 1000px) {
+    .video-Window {
+        position: relative;
+        height: 37vw;
+    }
+    .content {
+        flex-direction: row;
+    }
+
+    .video-Metadata {
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+    .video-Comments{
+        margin-right: 10px;
+        height: 2000px;
+    }
+
+    .lazy-List {
+        margin-top: 50px;
+        width: 360px;
+        height: 2000px;     
+    }
+}
