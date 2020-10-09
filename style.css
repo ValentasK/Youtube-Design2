@@ -37,6 +37,11 @@
     background-color: rgb(189, 181, 181);
 }
 
+.video{
+    width: 100%;
+    height: 100%;
+}
+
 /*          video Metadata          */
 .video-Metadata {
     margin-top: calc(50px + 56vw);
