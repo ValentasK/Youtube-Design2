@@ -3,7 +3,11 @@
     padding: 0px;
 }
 
-.container{
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+.container {
     position: relative;
     width: 98%;
     margin-left: auto;
@@ -24,27 +28,87 @@
     width: 100%;
     border: solid black 1px;
     background: rgb(230, 230, 230);
+    display: flex;
+    background-color: rgb(30, 30, 30);
+}
+
+.logo {
+    display: flex;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logo img {
+    width: 100px;
+    height: 30px;
+}
+
+.search {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.search img {
+    width: 22px;
+}
+
+.more {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.more img {
+    width: 20px;
+}
+
+/*   more settings */
+
+.moreSettings {
+    z-index: 6;
+    position: fixed;
+    background-color: rgba(20, 20, 20, 0.8);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+.settingsItems{
+    margin: auto;
+    color: rgb(200, 200, 200);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: rgb(40, 40, 40);
+}
+
+.settingsItems h3{
+   margin-left: 10px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-right: 50px;
 }
 
 /*          video Window             */
 .video-Window {
     z-index: 3;
-    position: fixed;
-    margin-top: 50px;
+    position: relative;
+    margin-top: 60px;
     height: 56vw;
-    width: 98%;
     border: solid black 1px;
     background-color: rgb(189, 181, 181);
 }
 
-.video{
+.video {
     width: 100%;
     height: 100%;
 }
 
 /*          video Metadata          */
 .video-Metadata {
-    margin-top: calc(50px + 56vw);
+    margin-top: 10px;
     height: 180px;
     border: solid black 1px;
     background: rgb(230, 230, 230);
@@ -52,22 +116,55 @@
 
 /*      video Comments              */
 .video-Comments {
+    margin-top: 10px;
     height: 47px;
     border: solid black 1px;
 }
 
 /*           lazy List               */
 .lazy-List {
-    height: 5000px;
+
     border: solid black 1px;
-    background: rgb(230, 230, 230);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
 }
 
-/* comments Entry Point */
-/* .comments-entry-point{
-height: 47px;
-border: solid black 1px;
-} */
+.lazyVideoItem {
+    margin-bottom: 5px;
+    display: flex;
+    position: relative;
+}
+
+.lazyVideo {}
+
+.video2 {
+    height: 100px;
+    width: 200px;
+}
+
+.lazyVideoDetails {
+
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.lazyVideoDetails h3 {
+
+    color: rgb(240, 240, 240);
+    font-size: 16px;
+}
+
+.lazyVideoDetails h5 {
+
+    color: rgb(140, 140, 140);
+    font-size: 14px;
+}
+
+
+
 
 
 /* ///////////// Media Queries Breakpoints according YouTube ////////// */
@@ -78,9 +175,7 @@ border: solid black 1px;
     .video-Window {
         height: 42vw;
     }
-    .video-Metadata {
-        margin-top: calc(50px + 42vw);
-    }
+
 }
 
 /* Large devices (desktops, 799px and up) */
@@ -88,15 +183,13 @@ border: solid black 1px;
     .video-Window {
         height: 40vw;
     }
-    .video-Metadata {
-        margin-top: calc(50px + 40vw);
-    }
 
-    .video-content{
+
+    .video-content {
         width: 100%;
     }
 
- 
+
 
 
 }
@@ -104,26 +197,26 @@ border: solid black 1px;
 /* Extra large devices (large desktops, 1279px and up) */
 @media (min-width: 1000px) {
     .video-Window {
-        position: relative;
+        margin-right: 10px;
         height: 37vw;
     }
+
     .content {
         flex-direction: row;
     }
 
     .video-Metadata {
-        margin-top: 0px;
         margin-right: 10px;
     }
 
-    .video-Comments{
+
+    .video-Comments {
         margin-right: 10px;
-        height: 2000px;
+        height: 800px;
     }
 
     .lazy-List {
-        margin-top: 50px;
+        margin-top: 60px;
         width: 360px;
-        height: 2000px;     
     }
 }
